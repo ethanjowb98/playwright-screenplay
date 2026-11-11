@@ -1,0 +1,41 @@
+{
+  "name": "playwright-screenplay",
+  "version": "0.1.0",
+  "description": "Playwright Screenplay-pattern test automation (API + E2E) for the qacloud.dev Market app",
+  "private": true,
+  "license": "ISC",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:core": "playwright test --project=core",
+    "test:setup": "playwright test --project=setup",
+    "test:api": "playwright test --project=api --project=stateful --grep @api",
+    "test:e2e": "playwright test --project=e2e-chromium --project=stateful --grep @e2e",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:list": "playwright test --list",
+    "report": "playwright show-report",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run format:check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@faker-js/faker": "^10.6.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^25.9.9",
+    "dotenv": "^18.0.9",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-playwright": "^2.12.2",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1"
+  }
+}

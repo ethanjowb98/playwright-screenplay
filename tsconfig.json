@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM"],
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"],
+    "paths": {
+      "@screenplay": ["./src/screenplay/index.ts"],
+      "@screenplay/*": ["./src/screenplay/*"],
+      "@abilities/*": ["./src/abilities/*"],
+      "@interactions/*": ["./src/interactions/*"],
+      "@tasks/*": ["./src/tasks/*"],
+      "@questions/*": ["./src/questions/*"],
+      "@ui/*": ["./src/ui/*"],
+      "@api/*": ["./src/api/*"],
+      "@config/*": ["./src/config/*"],
+      "@data/*": ["./src/data/*"],
+      "@fixtures": ["./src/fixtures/index.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts", "playwright.config.ts"]
+}
